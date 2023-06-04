@@ -34,13 +34,7 @@ async function AddClient() {
     }, 5000);
   }else{
       // try {
-  axios.post('https://simplon-backend-test-8tkj.vercel.app/api/v1/create', clientData.value,
-    {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': '*',
-      },
-    }
+  axios.post('https://simplon-backend-test-8tkj.vercel.app/api/v1/create', clientData.value
   ).then((response) => {
     message.value = response.data.message;
     sucessMessage()
