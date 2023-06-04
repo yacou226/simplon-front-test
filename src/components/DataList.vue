@@ -25,7 +25,7 @@ computed(() => {
 
 async function getAllClients() {
     try {
-        let response = await axios.get('http://localhost:5000/api/v1/clients');
+        let response = await axios.get('https://simplon-backend-test-8tkj.vercel.app/api/v1/clients');
         console.log(response.data);
         clients.value = response.data.clients;
     } catch (error) {
@@ -33,7 +33,7 @@ async function getAllClients() {
     }
 };
 async function removeClient(id) {
-      await fetch(`http://localhost:5000/api/v1/deleteOne/${id}`, {
+      await fetch(`https://simplon-backend-test-8tkj.vercel.app/api/v1/deleteOne/${id}`, {
         method: "delete",
         headers: {
           "Content-stype": "application/json; charset=UTF-8",
